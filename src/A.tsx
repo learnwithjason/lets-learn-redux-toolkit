@@ -4,16 +4,16 @@ import {AA} from "./AA";
 
 function A() {
 
-  console.log('Component A rendered')
+    console.log('Component A rendered')
 
-  return (
-    <div className="A">
-      <header className="Subcomponent-header">
-        <p>Component A</p>
-        <AA/>
-      </header>
-    </div>
-  )
+    return (
+        <div className="A">
+            <header className="Subcomponent-header">
+                <p>Component A</p>
+                <AA/>
+            </header>
+        </div>
+    )
 }
 
 export {A}

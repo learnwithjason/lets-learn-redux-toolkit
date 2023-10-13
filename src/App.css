@@ -27,6 +27,7 @@
 .Subcomponent-header {
   background-color: #334360;
   min-height: 10vh;
+  min-width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,4 +55,8 @@
 
 button {
   font-size: calc(10px + 2vmin);
+}
+
+p {
+  margin: 1vh;
 }
