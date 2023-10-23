@@ -42,14 +42,6 @@ npm run dev
 - [Follow _Learn With Jason_ on Twitch][twitch] to watch future episodes live
 - [Add the _Learn With Jason_ schedule to your Google Calendar][cal]
 
-<hr />
-&nbsp;
-Deploy this project (updated) to Netlify with a click:
-<p align="center">
-  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/ellockie/lets-learn-redux-toolkit">
-    <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy this project to Netlify" />
-  </a>
-</p>
 
 [episode]: https://www.learnwithjason.dev/let-s-learn-modern-redux
 [twitch]: https://jason.af/twitch
