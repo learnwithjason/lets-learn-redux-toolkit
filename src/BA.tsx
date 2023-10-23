@@ -11,7 +11,7 @@ function BA() {
     console.log('Rendering:  BA')
 
     const count = useAppSelector((state) => state.counter.value);
-    const sn = useAppSelector((state) => state.counter.SN);
+    const snState = useAppSelector((state) => state.deviceId.snState);
 
     return (
         <div className="BA">
@@ -19,8 +19,8 @@ function BA() {
                 <p className="component-title">Component: BA</p>
                 <div>
                     Counter: <div className="counter">{count}</div>
-                    <div>SN: {sn.value || STYLE.EMPTY_VALUE}</div>
-                    <div className="val-state">(state: {sn.isValid ? 'valid' : 'invalid'})</div>
+                    <div>SN: {snState.value || STYLE.EMPTY_VALUE}</div>
+                    <div className="val-state">(state: {snState.isValid ? 'valid' : 'invalid'})</div>
                 </div>
             </header>
         </div>

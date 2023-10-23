@@ -1,10 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counter-slice';
+
+import {counterReducer} from '../features/counter/counter-slice';
+import {deviceIdsReducer} from "../features/deviceId/deviceIds-slice";
 
 
 export const store = configureStore({
     reducer: {
         counter: counterReducer,
+        deviceId: deviceIdsReducer,
     },
 });
 

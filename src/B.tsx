@@ -15,8 +15,8 @@ function B() {
 
     console.log('Rendering:  B')
 
-    const macVal = useAppSelector((state) => state.counter.MAC.value);
-    const macIsValid = useAppSelector((state) => state.counter.MAC.isValid);
+    const macVal = useAppSelector((state) => state.deviceId.macState.value);
+    const macIsValid = useAppSelector((state) => state.deviceId.macState.isValid);
 
     return (
         <div className="B">

@@ -1,7 +1,8 @@
 import React from 'react'
 
 import {useAppDispatch, useAppSelector} from './app/hooks';
-import {incremented, amountAdded, macUpdated, snUpdated} from './features/counter/counter-slice';
+import {incremented, amountAdded} from './features/counter/counter-slice';
+import {macUpdated, snUpdated} from "./features/deviceId/deviceIds-slice";
 
 import './App.css'
 
@@ -11,8 +12,8 @@ function AA() {
     console.log('Rendering:  AA')
 
     const dispatch = useAppDispatch();
-    const sn = useAppSelector((state) => state.counter.SN);
-    const mac = useAppSelector((state) => state.counter.MAC);
+    const snState = useAppSelector((state) => state.deviceId.snState);
+    const macState = useAppSelector((state) => state.deviceId.macState);
 
     function handleClick() {
         // increment by 1
@@ -43,10 +44,10 @@ function AA() {
                     </button>
                 </p>
                 <p>
-                    <input type="text" placeholder="Enter MAC" value={mac.value} onChange={handleMacChange}/>
+                    <input type="text" placeholder="Enter MAC" value={macState.value} onChange={handleMacChange}/>
                 </p>
                 <p>
-                    <input type="text" placeholder="Enter SN" value={sn.value} onChange={handleSnChange}/>
+                    <input type="text" placeholder="Enter SN" value={snState.value} onChange={handleSnChange}/>
                 </p>
             </header>
         </div>
