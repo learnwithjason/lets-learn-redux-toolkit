@@ -8,15 +8,14 @@ import {B} from "./B";
 
 function App() {
 
-    console.log('App rendered')
-
+    console.log('Rendering: [ App ]')
 
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>Hello Redux + Redux-toolkit!</p>
                 <A/>
+                <p className="component-title">Component: App</p>
+                <p>Hello Redux + Redux-toolkit!</p>
                 <B/>
             </header>
         </div>

@@ -5,48 +5,45 @@ import './App.css'
 
 function AA() {
 
-    console.log('Component AA rendered')
+    console.log('Rendering:  AA')
 
-    // const count = useAppSelector((state) => state.counter.value);
     const dispatch = useAppDispatch();
-    const mac = useAppSelector((state) => state.counter.MAC);
     const sn = useAppSelector((state) => state.counter.SN);
-    // const [mac, setMac] = useState('');
-    // const [sn, setSn] = useState('');
+    const mac = useAppSelector((state) => state.counter.MAC);
 
     function handleClick() {
         // increment by 1
         // dispatch(incremented());
 
         // increment by a fixed amount
-        dispatch(amountAdded(3));
+        dispatch(amountAdded(1));
     }
 
+
     function handleMacChange(e: React.ChangeEvent<HTMLInputElement>) {
-        // setMac(e.target.value);
-        dispatch(macUpdated(e.target.value));
+        const macUpdate = {value: e.target.value, isValid: e.target.value !== ''};
+        dispatch(macUpdated(macUpdate));
     }
 
     function handleSnChange(e: React.ChangeEvent<HTMLInputElement>) {
-        // setSn(e.target.value);
-        dispatch(snUpdated(e.target.value));
+        const snUpdate = {value: e.target.value, isValid: e.target.value !== ''};
+        dispatch(snUpdated(snUpdate));
     }
 
     return (
         <div className="AA">
-            <header className="Subcomponent-header">
-                <p>Component AA</p>
+            <header className="Subcomponent-header App-bar">
+                <p className="component-title">Component: AA</p>
                 <p>
                     <button onClick={handleClick}>
-                        {/*count is: {count}*/}
-                        Increment the counter
+                        Counter++
                     </button>
                 </p>
                 <p>
-                    <input type="text" placeholder="Enter MAC" value={mac} onChange={handleMacChange}/>
+                    <input type="text" placeholder="Enter MAC" value={mac.value} onChange={handleMacChange}/>
                 </p>
                 <p>
-                    <input type="text" placeholder="Enter SN" value={sn} onChange={handleSnChange}/>
+                    <input type="text" placeholder="Enter SN" value={sn.value} onChange={handleSnChange}/>
                 </p>
             </header>
         </div>

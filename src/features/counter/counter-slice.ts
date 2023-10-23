@@ -1,16 +1,21 @@
 // DUCKS pattern
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+interface FieldState {
+    value: string;
+    isValid: boolean;
+}
+
 interface CounterState {
     value: number;
-    MAC: string;
-    SN: string;
+    MAC: FieldState;
+    SN: FieldState;
 }
 
 const initialState: CounterState = {
     value: 0,
-    MAC: 'AA:BB:CC:DD:EE:FF',
-    SN: '---'
+    MAC: {value: '', isValid: false},
+    SN: {value: '', isValid: false}
 };
 
 const counterSlice = createSlice({
@@ -18,24 +23,28 @@ const counterSlice = createSlice({
     initialState,
     reducers: {
         incremented(state) {
-            // it's okay to do this because immer makes it immutable
-            // under the hood
             state.value++;
+        },
+        decremented(state) {
+            state.value--;
         },
         amountAdded(state, action: PayloadAction<number>) {
             state.value += action.payload;
         },
-        macUpdated(state, action: PayloadAction<string>) {
+        macUpdated(state, action: PayloadAction<FieldState>) {
             state.MAC = action.payload;
         },
-        snUpdated(state, action: PayloadAction<string>) {
+        snUpdated(state, action: PayloadAction<FieldState>) {
             state.SN = action.payload;
         },
     },
 });
 
 export const {
-    incremented, amountAdded, macUpdated,
+    incremented,
+    decremented,
+    amountAdded,
+    macUpdated,
     snUpdated
 } = counterSlice.actions;
 export default counterSlice.reducer;

@@ -4,12 +4,12 @@ import {AA} from "./AA";
 
 function A() {
 
-    console.log('Component A rendered')
+    console.log('Rendering:  A')
 
     return (
         <div className="A">
             <header className="Subcomponent-header">
-                <p>Component A</p>
+                <p className="component-title">Component: A</p>
                 <AA/>
             </header>
         </div>

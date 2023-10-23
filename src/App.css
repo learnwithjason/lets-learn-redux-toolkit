@@ -3,13 +3,22 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
+.counter {
+  font-weight: bold;
+  font-size: 2em;
+  color: orange;
+  text-shadow: 0 0 22px #fff8;
+  padding: 2vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-logo,
+  .counter {
+    animation: Custom-animation infinite 5s ease-in-out;
   }
 }
 
@@ -19,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -36,27 +45,59 @@
   color: white;
   border: 1px solid yellow;
   border-radius: 16px;
-  padding: 16px;
+  padding: 4px;
   margin: 16px;
+}
+
+.App-bar {
+  flex-direction: row;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.val-state {
+  color: #61dafb;
 }
 
 button {
   font-size: calc(10px + 2vmin);
+  border-radius: 22px;
+  padding: 1vh;
+}
+
+.bouttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
 }
 
 p {
   margin: 1vh;
+}
+
+.component-title {
+  color: yellow;
+}
+
+@keyframes Custom-animation {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+input {
+  padding: 1vh;
+  background: #a6a6a6;
+  font-size: calc(10px + 2vmin);
+  border-radius: 11px;
+  box-shadow: inset 5px 5px 10px #0004;
 }

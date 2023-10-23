@@ -1,26 +1,22 @@
 import React from 'react'
-import {useAppDispatch, useAppSelector} from './app/hooks';
-import {incremented, amountAdded} from './features/counter/counter-slice';
+import {useUpdates} from "./hooks/useUpdates";
 import './App.css'
+
 
 function BB() {
 
-    console.log('Component BB rendered')
+    console.log('Rendering:  BB')
 
-    const count = useAppSelector((state) => state.counter.value);
-    const sn = useAppSelector((state) => state.counter.SN);
-
+    const {increment, decrement } = useUpdates();
 
     return (
         <div className="BB">
             <header className="Subcomponent-header">
-                <p>Component BB</p>
-                <p>
-                    count: {count}
-                    <br/>
-                    sn: {sn}
-
-                </p>
+                <p className="component-title">Component: BB (with custom "actions" hooks)</p>
+                <div className="bouttons">
+                <button onClick={increment}>Counter++</button>
+                <button onClick={decrement}>Counter--</button>
+                </div>
             </header>
         </div>
     )
