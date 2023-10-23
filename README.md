@@ -1,11 +1,16 @@
+
+<h1 align="center">
+  This demo app is based on:
+</h1>
+<hr />
 <p align="center">
   <a href="https://www.learnwithjason.dev">
     <img src="https://res.cloudinary.com/jlengstorf/image/upload/q_auto,f_auto,w_240/v1579281727/lwj/learnwithjason.png" alt="Learn With Jason" width="120" />
   </a>
 </p>
-<h1 align="center">
+<h2 align="center">
   Let’s Learn Modern Redux! (with Mark Erikson)
-</h1>
+</h2>
 <h3 align="center">
   This app was built live on <em>Learn With Jason</em> and it was super fun and I’m sad you weren’t there.
 </h3>
@@ -23,15 +28,25 @@ A lot has changed in Redux since it was originally created. In this episode, Mar
 
 &nbsp;
 
-## More Information
+<hr />
+## How to run
+
+```
+npm install
+npm run dev
+```
+<hr />
+## More Information (re: original project)
 
 - [Watch this app get built live + see links and additional resources][episode]
 - [Follow _Learn With Jason_ on Twitch][twitch] to watch future episodes live
 - [Add the _Learn With Jason_ schedule to your Google Calendar][cal]
 
+<hr />
 &nbsp;
+Deploy this project (updated) to Netlify with a click:
 <p align="center">
-  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/learnwithjason/lets-learn-redux-toolkit&utm_source=learnwithjason&utm_medium=github&utm_campaign=devex">
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/ellockie/lets-learn-redux-toolkit">
     <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy this project to Netlify" />
   </a>
 </p>
