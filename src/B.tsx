@@ -1,11 +1,15 @@
 import React from 'react'
-import {useAppDispatch, useAppSelector} from './app/hooks';
-import {incremented, amountAdded} from './features/counter/counter-slice';
-import './App.css'
+
+import {useAppSelector} from './app/hooks';
+
 import {BB} from "./BB";
 import {BA} from "./BA";
 import {BC} from "./BC";
+
 import {STYLE} from "./app/constants";
+
+import './App.css'
+
 
 function B() {
 

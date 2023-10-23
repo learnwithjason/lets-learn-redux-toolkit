@@ -1,7 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
+
 import {useAppDispatch, useAppSelector} from './app/hooks';
 import {incremented, amountAdded, macUpdated, snUpdated} from './features/counter/counter-slice';
+
 import './App.css'
+
 
 function AA() {
 
